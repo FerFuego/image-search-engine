@@ -5,7 +5,7 @@ body {
 }
 
 #resultado {
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
 }
 
