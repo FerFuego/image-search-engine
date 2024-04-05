@@ -1,0 +1,27 @@
+body {
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+#resultado {
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+.card-img-link {
+  max-height: 255px;
+  overflow: hidden;
+}
+
+.card img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
