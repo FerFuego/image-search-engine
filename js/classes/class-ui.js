@@ -71,7 +71,7 @@ class UI {
         const paginacion = document.querySelector('#paginacion');
         paginacion.innerHTML = '';
         const div = document.createElement('div');
-        div.classList.add('py-3', 'w-full', 'flex', 'gap-2', 'justify-center', 'mt-10');
+        div.classList.add('py-3', 'w-full', 'flex', 'flex-wrap', 'gap-2', 'justify-center', 'mt-10');
         for (let i = 1; i <= totalPaginas; i++) {
             const btn = document.createElement('a');
             btn.textContent = i;
@@ -81,7 +81,7 @@ class UI {
                 // Llamada a la API
                 this.showData(api.getData(termino, i));
             }
-            btn.classList.add('bg-green-400', 'px-4', 'py-1', 'cursor-pointer');
+            btn.classList.add('bg-green-400', 'px-4', 'py-1', 'cursor-pointer', 'rounded');
             div.appendChild(btn);
         }
         paginacion.appendChild(div);
