@@ -8,12 +8,16 @@ class api_pixabay {
         this.url = `${this.api_url}?key=${this.api_key}&q=`;
     }
 
-    getData(term, page = 1) {
-        return fetch(`${this.url}${term}&page=${page}&image_type=photo&pretty=true&per_page=100`)
-            .then(response => response.json())
-            .then(result => result)
-            .catch(error => console.log(error))
+    async getData(term, page = 1) {
+        try {
+            const response = await fetch(`${this.url}${term}&page=${page}&image_type=photo&pretty=true&per_page=100`);
+            const result   = await response.json();
+            return result;
+        } catch (error) {
+           return error;
+        }
     }
+
 }
 
 export default api_pixabay;   
